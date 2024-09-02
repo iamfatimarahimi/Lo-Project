@@ -1,1 +1,40 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: url("./images/Mike-gate.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+nav img {
+  width: 121px;
+  height: 40px;
+}
+
+.list-containr {
+  margin: 0 50px 0 50px;
+  display: grid;
+  height: 50px;
+  grid-template-columns: 1fr auto auto;
+  border-bottom: 0.5px solid #fff;
+  align-items: center;
+}
+.list-containr li {
+  list-style-type: none;
+  margin: 15px;
+  justify-self: end;
+}
+.list-containr li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ebdede;
+  padding: 15px;
+}
+.list-containr li a:hover {
+  color: #ff0707;
+}/*# sourceMappingURL=style.css.map */
