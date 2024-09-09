@@ -1,4 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap");
 @import "./config";
+body {
+  font-family: "Inika", serif;
+  background: $background-color;
+}
 header {
   background: url("./images/Mike-gate.jpg") no-repeat;
   background-size: cover;
@@ -14,7 +19,7 @@ nav img {
   display: grid;
   height: 50px;
   grid-template-columns: 1fr auto auto;
-  border-bottom: 0.5px solid #fff;
+  border-bottom: 1.5px solid rgb(255, 255, 255);
   align-items: center;
 
   li {
@@ -30,6 +35,95 @@ nav img {
       &:hover {
         color: #ff0707;
       }
+    }
+  }
+}
+.head {
+  margin: 150px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto; /* Add this line to define two rows */
+  grid-template-areas:
+    "icon icon icon"
+    "title title title"; /* Define the areas for the icon and title */
+  color: #fff;
+  #stranger-icon {
+    width: 151px;
+    height: 90px;
+    grid-area: icon; /* Assign the icon to the icon area */
+  }
+  h1 {
+    margin-top: 0; /* Remove the margin-top to avoid extra space */
+    font-size: 56px;
+    grid-area: title; /* Assign the title to the title area */
+  }
+  .circle {
+    position: relative;
+    display: block;
+    margin-top: 30px;
+    font-weight: bold;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+
+    p {
+      text-align: center;
+      position: absolute;
+      top: 50px;
+      left: 20px;
+    }
+    .bx {
+      position: absolute;
+      top: 80px;
+      left: 60px;
+      font-size: 30px;
+    }
+  }
+}
+.StoryLine {
+  color: $text-color;
+  display: grid;
+  // grid-template-columns: 1fr 2fr 1fr;
+  // grid-template-rows: auto auto auto; /* Add this line to define two rows */
+  grid-template-areas:
+    "header demogorgen"
+    "paragraph demogorgen"
+    "button button";
+  h1 {
+    grid-area: header;
+    color: transparent;
+    -webkit-text-stroke: 2px $txt-storke;
+    font-size: 100px;
+    margin: 50px 50px 0 80px;
+  }
+  p {
+    width: 500px;
+    text-align: center;
+    margin: 0 50px 50px 80px;
+  }
+  #demogorgen {
+    height: 500px;
+    width: 800px;
+    margin-top: 10px;
+    grid-area: demogorgen;
+  }
+  .watch-icon {
+    // background: red;
+    grid-area: button;
+    display: flex;
+    margin: 0 50px 15px 80px;
+    img {
+      height: 60px;
+      width: 60px;
+    }
+    p {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+    }
+    :hover {
+      cursor: pointer;
     }
   }
 }
